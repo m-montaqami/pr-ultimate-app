@@ -1,19 +1,16 @@
-import React from 'react'
+import React, { use } from 'react'
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react'
+import Header from '../components/Header/Header'
+import useLocalStorage from '../Hooks/useLocalStorage'
 
-export default function Home() {
+export default function Home(probs) {
+  const vars = useLocalStorage()
+  console.log(vars)
   return (
-    <div
-      css={css`
-        background-color: hotpink;
-        &:hover {
-          color: red;
-        }
-      `}
-    >
+    <div>
       <main>
-        <p>this is test</p>
+        <Header />
       </main>
     </div>
   )
